@@ -1,0 +1,11 @@
+> aggregate(Rg~System, shaped_edit_Rg_epitope_NPT_W_I_PMm_100_ns, sd)
+    System         Rg
+1   no_bonds 137.8745
+2   X2_bonds 186.4695
+3   X303_350 145.2025
+> kruskal.test(Rg~System, shaped_edit_Rg_epitope_NPT_W_I_PMm_100_ns)
+
+	Kruskal-Wallis rank sum test
+
+data:  Rg by System
+Kruskal-Wallis chi-squared = 0.1888, df = 2, p-value = 0.9099

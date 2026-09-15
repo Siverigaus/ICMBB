@@ -1,0 +1,23 @@
+> aggregate(Eel~System, shaped_edit_Eel_protein_NPT_W_I_PMm_100_ns, median)
+    System        Eel
+1   no_bonds -1236801
+2   X2_bonds -1347442
+3   X303_350 -1344493
+> kruskal.test(Eel~System, shaped_edit_Eel_protein_NPT_W_I_PMm_100_ns)
+
+	Kruskal-Wallis rank sum test
+
+data:  Eel by System
+Kruskal-Wallis chi-squared = 2654.6, df = 2, p-value < 2.2e-16
+
+> pairwise.wilcox.test(shaped_edit_Eel_protein_NPT_W_I_PMm_100_ns$Eel, shaped_edit_Eel_protein_NPT_W_I_PMm_100_ns$System, p.adjust.method = "bonferroni")
+
+	Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+
+data:  shaped_edit_Eel_protein_NPT_W_I_PMm_100_ns$Eel and shaped_edit_Eel_protein_NPT_W_I_PMm_100_ns$System 
+
+         no_bonds  X2_bonds
+X2_bonds < 2e-16   -       
+X303_350 < 2e-16   < 2e-16 
+
+P value adjustment method: bonferroni

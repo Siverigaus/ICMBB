@@ -1,0 +1,9 @@
+> summary(rd_MD_ECL_2_bonds_NPT_W_I_PMm_100_ns_stride_5)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  0.000   2.526   3.412   3.745   4.986   7.175 
+> summary(rd_MD_ECL_no_bonds_NPT_W_I_PMm_100_ns_stride_5)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  0.000   4.078   6.451   6.082   7.801   9.669 
+> summary(rd_MD_ECL_303_350_NPT_W_I_PMm_100_ns_stride_5)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  0.000   3.231   4.090   4.098   4.785   6.896

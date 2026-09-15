@@ -1,0 +1,23 @@
+> aggregate(EVdW~System, shaped_edit_EVdW_protein_NPT_W_I_PMm_100_ns, median)
+    System      EVdW
+1  no_bonds 71680.33
+2  X2_bonds 82071.91
+3  X303_350 81876.17
+> kruskal.test(EVdW~System, shaped_edit_EVdW_protein_NPT_W_I_PMm_100_ns)
+
+	Kruskal-Wallis rank sum test
+
+data:  EVdW by System
+Kruskal-Wallis chi-squared = 2031.3, df = 2, p-value < 2.2e-16
+
+> pairwise.wilcox.test(shaped_edit_EVdW_protein_NPT_W_I_PMm_100_ns$EVdW, shaped_edit_EVdW_protein_NPT_W_I_PMm_100_ns$System, p.adjust.method = "bonferroni")
+
+	Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+
+data:  shaped_edit_EVdW_protein_NPT_W_I_PMm_100_ns$EVdW and shaped_edit_EVdW_protein_NPT_W_I_PMm_100_ns$System 
+
+         no_bonds  X2_bonds
+X2_bonds < 2e-16   -       
+X303_350 < 2e-16   6.3e-16
+
+P value adjustment method: bonferroni

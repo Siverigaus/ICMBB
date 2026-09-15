@@ -1,0 +1,23 @@
+> aggregate(SASA~System, shaped_edit_SASA_epitope_NPT_W_I_PMm_100_ns, median)
+    System       SASA
+1   no_bonds 249.3445
+2   X2_bonds 248.5666
+3   X303_350 249.6434
+> kruskal.test(SASA~System, shaped_edit_SASA_epitope_NPT_W_I_PMm_100_ns)
+
+	Kruskal-Wallis rank sum test
+
+data:  SASA by System
+Kruskal-Wallis chi-squared = 5.0879, df = 2, p-value = 0.07855
+
+> pairwise.wilcox.test(shaped_edit_SASA_epitope_NPT_W_I_PMm_100_ns$SASA, shaped_edit_SASA_epitope_NPT_W_I_PMm_100_ns$System, p.adjust.method = "bonferroni")
+
+	Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+
+data:  shaped_edit_SASA_epitope_NPT_W_I_PMm_100_ns$SASA and shaped_edit_SASA_epitope_NPT_W_I_PMm_100_ns$System 
+
+         no_bonds X2_bonds
+X2_bonds 0.945    -       
+X303_350 0.707    0.067   
+
+P value adjustment method: bonferroni

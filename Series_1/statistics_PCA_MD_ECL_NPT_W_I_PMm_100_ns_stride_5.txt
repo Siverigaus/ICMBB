@@ -1,0 +1,134 @@
+################################### Score PC
+> aggregate(Value~System+pc, df_all, median)
+    System   pc       Value
+1   no_bonds PC1     -13.89123555
+2   2_bonds  PC1      6.42032240
+3   303_350  PC1      7.98654610
+4   no_bonds PC2     -1.48800906
+5   2_bonds  PC2      2.95565074
+6   303_350  PC2     -1.19679055
+7   no_bonds PC3      0.08642295
+8   2_bonds  PC3     -0.49136071
+9   303_350  PC3     -2.26814357
+> kruskal.test(Value~System, df_pc1)
+
+	Kruskal-Wallis rank sum test
+
+data:  Value by System
+Kruskal-Wallis chi-squared = 0.41497, df = 2, p-value = 0.8126
+
+> kruskal.test(Value~System, df_pc2)
+
+	Kruskal-Wallis rank sum test
+
+data:  Value by System
+Kruskal-Wallis chi-squared = 1.0857, df = 2, p-value = 0.5811
+
+> kruskal.test(Value~System, df_pc3)
+
+	Kruskal-Wallis rank sum test
+
+data:  Value by System
+Kruskal-Wallis chi-squared = 0.75775, df = 2, p-value = 0.6846
+
+# Пусть и везде p>0.05, на всякий случай проверим:
+
+> pairwise.wilcox.test(df_pc1$Value, df_pc1$System, p.adjust.method = "bonferroni")
+
+	Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+
+data:  df_pc1$Value and df_pc1$System 
+
+         no_bonds  2_bonds
+2_bonds  1         -      
+303_350  1         1    
+
+P value adjustment method: bonferroni 
+> pairwise.wilcox.test(df_pc2$Value, df_pc2$System, p.adjust.method = "bonferroni")
+
+	Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+
+data:  df_pc2$Value and df_pc2$System 
+
+         no_bonds  2_bonds
+2_bonds  0.8       -      
+303_350  1.0       1.0      
+
+P value adjustment method: bonferroni 
+> pairwise.wilcox.test(df_pc3$Value, df_pc3$System, p.adjust.method = "bonferroni")
+
+	Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+
+data:  df_pc3$Value and df_pc3$System 
+
+         no_bonds 2_bonds
+2_bonds  1        -      
+303_350  1        1       
+
+P value adjustment method: bonferroni
+############################################ PC
+> aggregate(Value~System+pc, df_all_au, median)
+    System    pc       Value
+1   no_bonds  PC1      0.05391249
+2   2_bonds   PC1      0.07061779
+3   303_350   PC1      0.06407538
+4   no_bonds  PC2      0.05438942
+5   2_bonds   PC2      0.05157233
+6   303_350   PC2      0.04755641
+7   no_bonds  PC3      0.07295329
+8   2_bonds   PC3      0.06141988
+9   303_350   PC3      0.07390241
+> kruskal.test(Value~System, df_pc1_au)
+
+	Kruskal-Wallis rank sum test
+
+data:  Value by System
+Kruskal-Wallis chi-squared = 2.4733, df = 2, p-value = 0.2904
+
+> kruskal.test(Value~System, df_pc2_au)
+
+	Kruskal-Wallis rank sum test
+
+data:  Value by System
+Kruskal-Wallis chi-squared = 0.001111, df = 2, p-value = 0.9994
+
+> kruskal.test(Value~System, df_pc3_au)
+
+	Kruskal-Wallis rank sum test
+
+data:  Value by System
+Kruskal-Wallis chi-squared = 3.7204, df = 2, p-value = 0.1556
+
+> pairwise.wilcox.test(df_pc1_au$Value, df_pc1_au$System, p.adjust.method = "bonferroni")
+
+	Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+
+data:  df_pc1_au$Value and df_pc1_au$System 
+
+         no_bonds  2_bonds
+2_bonds  0.37      -      
+303_350  1.00      1.00      
+
+P value adjustment method: bonferroni 
+> pairwise.wilcox.test(df_pc2_au$Value, df_pc2_au$System, p.adjust.method = "bonferroni")
+
+	Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+
+data:  df_pc2_au$Value and df_pc2_au$System 
+
+         no_bonds  2_bonds
+2_bonds  1         -      
+303_350  1         1    
+
+P value adjustment method: bonferroni 
+> pairwise.wilcox.test(df_pc3_au$Value, df_pc3_au$System, p.adjust.method = "bonferroni")
+
+	Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+
+data:  df_pc3_au$Value and df_pc3_au$System 
+
+         no_bonds  2_bonds
+2_bonds  0.23      -      
+303_350  1.00      0.37   
+
+P value adjustment method: bonferroni

@@ -1,0 +1,23 @@
+> aggregate(RMSD~System, shaped_edit_multiplot_RMSD_ECL_NPT_W_I_PMm_100_ns, median)
+             System       RMSD
+1            no_bonds 7.435335
+2            X2_bonds 5.822544
+3            X303_350 5.383842
+> kruskal.test(RMSD~System, shaped_edit_multiplot_RMSD_ECL_NPT_W_I_PMm_100_ns)
+
+	Kruskal-Wallis rank sum test
+
+data:  RMSD by System
+Kruskal-Wallis chi-squared = 133.57, df = 2, p-value < 2.2e-16
+
+> pairwise.wilcox.test(shaped_edit_multiplot_RMSD_ECL_NPT_W_I_PMm_100_ns$RMSD, shaped_edit_multiplot_RMSD_ECL_NPT_W_I_PMm_100_ns$System, p.adjust.method = "bonferroni")
+
+	Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+
+data:  shaped_edit_multiplot_RMSD_ECL_NPT_W_I_PMm_100_ns$RMSD and shaped_edit_multiplot_RMSD_ECL_NPT_W_I_PMm_100_ns$System 
+
+         no_bonds X2_bonds
+X2_bonds 3.2e-10  -       
+X303_350 < 2e-16  4.6e-06 
+
+P value adjustment method: bonferroni
