@@ -1,4 +1,4 @@
-# Series\_1 — данные моделирования молекулярной динамики
+# Series_1 — данные моделирования молекулярной динамики
 
 Результаты 100-нс MD-моделирования белка в асимметрической плазматической мембране млекопитающих (PMm).
 Исследованы три системы, различающиеся набором дисульфидных связей.
@@ -9,44 +9,44 @@
 
 |Система|Введённые дисульфидные связи|Конфиг|Выходной лог|
 |-|-|-|-|
-|`2\_bonds`|C303–C350 и C322–C328|`MD\_2\_bonds\_W\_I\_PMm\_100\_ns\_3.conf`|`MD\_2\_bonds\_W\_I\_PMm\_100\_ns.out`|
-|`303\_350`|только C303–C350|`MD\_303\_350\_W\_I\_PMm\_100\_ns\_3.conf`|`MD\_303\_350\_W\_I\_PMm\_100\_ns.out`|
-|`no\_bonds`|связи не вводились|`MD\_no\_bonds\_W\_I\_PMm\_100\_ns\_3.conf`|`MD\_no\_bonds\_W\_I\_PMm\_100\_ns.out`|
+|`2_bonds`|C303–C350 и C322–C328|`MD_2_bonds_W_I_PMm_100_ns_3.conf`|`MD_2_bonds_W_I_PMm_100_ns.out`|
+|`303_350`|только C303–C350|`MD_303_350_W_I_PMm_100_ns_3.conf`|`MD_303_350_W_I_PMm_100_ns.out`|
+|`no_bonds`|связи не вводились|`MD_no_bonds_W_I_PMm_100_ns_3.conf`|`MD_no_bonds_W_I_PMm_100_ns.out`|
 
 
 
 Имена файлов повторностей различаются суффиксом после длительности симуляции:
 
-* первая повторность — без суффикса: `...\_100\_ns.txt`
-* вторая повторность — суффикс `\_2`: `...\_100\_ns\_2.txt`
-* третья повторность — суффикс `\_3`: `...\_100\_ns\_3.txt`
+* первая повторность — без суффикса: `..._100_ns.txt`
+* вторая повторность — суффикс `_2`: `..._100_ns_2.txt`
+* третья повторность — суффикс `_3`: `..._100_ns_3.txt`
 
 Примеры:
 
-* `Rg\_ECL\_2\_bonds\_NPT\_W\_I\_PMm\_100\_ns\_2.txt`
-* `RMSF\_epitope\_no\_bonds\_NPT\_W\_I\_PMm\_100\_ns\_3.txt`
-* `MD\_2\_bonds\_W\_I\_PMm\_100\_ns\_2.conf` / `MD\_2\_bonds\_W\_I\_PMm\_100\_ns\_2.out`
+* `Rg_ECL_2_bonds_NPT_W_I_PMm_100_ns_2.txt`
+* `RMSF_epitope_no_bonds_NPT_W_I_PMm_100_ns_3.txt`
+* `MD_2_bonds_W_I_PMm_100_ns_2.conf` / `MD_2_bonds_W_I_PMm_100_ns_2.out`
 
 
 
-Пример системы (скриншот из VMD): `MD\_no\_bonds\_W\_I\_PMm\_100\_ns.png`.
+Пример системы (скриншот из VMD): `MD_no_bonds_W_I_PMm_100_ns.png`.
 
 ## Условия моделирования (расшифровка имени)
 
-Суффикс `NPT\_W\_I\_PMm\_100\_ns` в именах файлов означает:
+Суффикс `NPT_W_I_PMm_100_ns` в именах файлов означает:
 
 * **NPT** — изобарно-изотермический ансамбль на производительной 100-нс стадии.
 * **W** — сольватация в водной ячейке 150 × 150 × 190 Å.
 * **I** — добавлены ионы Na⁺ и Cl⁻ в концентрации 0.15 M.
 * **PMm** — асимметрическая плазматическая мембрана млекопитающих.
-* **100\_ns** — длительность симуляции.
+* **100_ns** — длительность симуляции.
 
 ## Исследуемые параметры
 
 |Параметр|Для каких частей белка|Комментарий|
 |-|-|-|
-|RMSD|protein, ECL, epitope|среднекадратичное отклонение; для MD\_ECL — с шагом 5 кадров (`stride\_5`)|
-|RMSF|ECL, epitope|среднеквадратичная флуктуация; для MD\_ECL — с шагом 5 кадров|
+|RMSD|protein, ECL, epitope|среднекадратичное отклонение; для MD_ECL — с шагом 5 кадров (`stride_5`)|
+|RMSF|ECL, epitope|среднеквадратичная флуктуация; для MD_ECL — с шагом 5 кадров|
 |SASA|ECL, epitope|площадь поверхности, доступная для растворителя|
 |Rg|ECL, epitope|радиус гирации|
 |PCA|ECL|PC1, PC2, PC3; `PCA123` — все три на одном рисунке|
@@ -63,11 +63,11 @@
 
 Общий шаблон:
 
-<префикс><параметр><система>\_NPT\_W\_I\_PMm\_100\_ns\[\_N]\[\_stride\_5].<расширение>
+<префикс><параметр><система>_NPT_W_I_PMm_100_ns\[_N]\[_stride_5].<расширение>
 
 
 
-где `\_N` — номер повторности: отсутствует для 1-й, `\_2` — для 2-й, `\_3` — для 3-й.
+где `_N` — номер повторности: отсутствует для 1-й, `_2` — для 2-й, `_3` — для 3-й.
 
 
 
@@ -81,21 +81,21 @@
 
 | (без префикса) | сырые данные |
 
-| `edit\_` | отредактированные данные: убрана лишняя строка, введены заголовки |
+| `edit_` | отредактированные данные: убрана лишняя строка, введены заголовки |
 
-| `paint\_` / `paint2\_`, `paint3\_` … | график отредактирован в Paint (номер — номер редакции) |
+| `paint_` / `paint2_`, `paint3_` … | график отредактирован в Paint (номер — номер редакции) |
 
-| `statistics\_` | статистика по параметру |
+| `statistics_` | статистика по параметру |
 
-| `summary\_` | краткое изложение числовых результатов по параметру |
+| `summary_` | краткое изложение числовых результатов по параметру |
 
-| `multiplot\_` | данные для мультиплотов |
+| `multiplot_` | данные для мультиплотов |
 
-| `boxplots\_` / `paint\_boxplots\_` | ящики с усами (сырые / отредактированные) |
+| `boxplots_` / `paint_boxplots_` | ящики с усами (сырые / отредактированные) |
 
-| `hist\_` / `hists\_` | гистограмма (одна / несколько на рисунке) |
+| `hist_` / `hists_` | гистограмма (одна / несколько на рисунке) |
 
-| `plot\_` / `plots\_` / `paint\_plots\_` | графики (один / несколько на рисунке / отредактированные) |
+| `plot_` / `plots_` / `paint_plots_` | графики (один / несколько на рисунке / отредактированные) |
 
 
 
@@ -107,11 +107,11 @@
 
 \- `PCA`, `PC1`, `PC2`, `PC3`, `PCA123` — анализ главных компонент.
 
-\- `Eel\_protein`, `EVdW\_protein` — энергии.
+\- `Eel_protein`, `EVdW_protein` — энергии.
 
 \- `303350`, `322328` — расстояния S–S между остатками.
 
-\- `stride\_5` — анализ каждого 5-го кадра траектории.
+\- `stride_5` — анализ каждого 5-го кадра траектории.
 
 
 
@@ -125,55 +125,55 @@
 
 Примеры:
 
-\- `Rg\_ECL\_2\_bonds\_NPT\_W\_I\_PMm\_100\_ns.txt`
+\- `Rg_ECL_2_bonds_NPT_W_I_PMm_100_ns.txt`
 
-\- `RMSF\_epitope\_no\_bonds\_NPT\_W\_I\_PMm\_100\_ns.txt`
+\- `RMSF_epitope_no_bonds_NPT_W_I_PMm_100_ns.txt`
 
-\- `SASA\_ECL\_303\_350\_NPT\_W\_I\_PMm\_100\_ns.txt`
+\- `SASA_ECL_303_350_NPT_W_I_PMm_100_ns.txt`
 
-\- `Eel\_protein\_2\_bonds\_NPT\_W\_I\_PMm\_100\_ns.txt`
+\- `Eel_protein_2_bonds_NPT_W_I_PMm_100_ns.txt`
 
-\- `EVdW\_protein\_no\_bonds\_NPT\_W\_I\_PMm\_100\_ns.txt`
+\- `EVdW_protein_no_bonds_NPT_W_I_PMm_100_ns.txt`
 
-\- `303350\_2\_bonds\_NPT\_W\_I\_PMm\_100\_ns.txt`
+\- `303350_2_bonds_NPT_W_I_PMm_100_ns.txt`
 
-\- `322328\_2\_bonds\_NPT\_W\_I\_PMm\_100\_ns.txt`
+\- `322328_2_bonds_NPT_W_I_PMm_100_ns.txt`
 
-\- `multiplot\_RMSD\_ECL\_2\_bonds\_NPT\_W\_I\_PMm\_100\_ns.txt` — агрегированные данные для мультиплота
+\- `multiplot_RMSD_ECL_2_bonds_NPT_W_I_PMm_100_ns.txt` — агрегированные данные для мультиплота
 
-\- `summary\_RMSD\_MD\_ECL\_NPT\_W\_I\_PMm\_100\_ns\_stride\_5.txt` — сводка числовых результатов по RMSD
+\- `summary_RMSD_MD_ECL_NPT_W_I_PMm_100_ns_stride_5.txt` — сводка числовых результатов по RMSD
 
-\- `summary\_RMSF\_MD\_ECL\_NPT\_W\_I\_PMm\_100\_ns\_stride\_5.txt` — сводка числовых результатов по RMSF
+\- `summary_RMSF_MD_ECL_NPT_W_I_PMm_100_ns_stride_5.txt` — сводка числовых результатов по RMSF
 
 
 
-\### 2. Отредактированные данные (.txt, префикс `edit\_`)
+\### 2. Отредактированные данные (.txt, префикс `edit_`)
 
 Сырые данные после правки: убрана лишняя строка, добавлены заголовки.
 
 Примеры:
 
-\- `edit\_Rg\_ECL\_NPT\_W\_I\_PMm\_100\_ns.txt`
+\- `edit_Rg_ECL_NPT_W_I_PMm_100_ns.txt`
 
-\- `edit\_RMSF\_ECL\_NPT\_W\_I\_PMm\_100\_ns.txt`
+\- `edit_RMSF_ECL_NPT_W_I_PMm_100_ns.txt`
 
-\- `edit\_multiplot\_RMSD\_protein\_NPT\_W\_I\_PMm\_100\_ns.txt`
+\- `edit_multiplot_RMSD_protein_NPT_W_I_PMm_100_ns.txt`
 
-\- `edit\_303350\_NPT\_W\_I\_PMm\_100\_ns.txt`
+\- `edit_303350_NPT_W_I_PMm_100_ns.txt`
 
 
 
-\### 3. Статистика (.txt, префикс `statistics\_`)
+\### 3. Статистика (.txt, префикс `statistics_`)
 
 Результаты статистической обработки по параметрам (RStudio).
 
 Примеры:
 
-\- `statistics\_RMSD\_ECL\_NPT\_W\_I\_PMm\_100\_ns.txt`
+\- `statistics_RMSD_ECL_NPT_W_I_PMm_100_ns.txt`
 
-\- `statistics\_SASA\_epitope\_NPT\_W\_I\_PMm\_100\_ns.txt`
+\- `statistics_SASA_epitope_NPT_W_I_PMm_100_ns.txt`
 
-\- `statistics\_PCA\_MD\_ECL\_NPT\_W\_I\_PMm\_100\_ns\_stride\_5.txt`
+\- `statistics_PCA_MD_ECL_NPT_W_I_PMm_100_ns_stride_5.txt`
 
 
 
@@ -185,55 +185,55 @@
 
 |---------|-------------|
 
-| `boxplots\_` | ящики с усами, сырые |
+| `boxplots_` | ящики с усами, сырые |
 
-| `paint\_boxplots\_` | ящики с усами, отредактированные |
+| `paint_boxplots_` | ящики с усами, отредактированные |
 
-| `hist\_` / `hists\_` | гистограмма (одна / несколько) |
+| `hist_` / `hists_` | гистограмма (одна / несколько) |
 
-| `plots\_` | графики зависимостей (несколько на рисунке), сырые |
+| `plots_` | графики зависимостей (несколько на рисунке), сырые |
 
-| `paint\_plots\_` | то же, отредактированные |
+| `paint_plots_` | то же, отредактированные |
 
-| `plot\_` | отдельный график |
+| `plot_` | отдельный график |
 
-| `plot\_PCA123\_` | все три главные компоненты на одном рисунке |
+| `plot_PCA123_` | все три главные компоненты на одном рисунке |
 
 
 
 Примеры:
 
-\- `boxplots\_RMSD\_ECL\_NPT\_W\_I\_PMm\_100\_ns.png`
+\- `boxplots_RMSD_ECL_NPT_W_I_PMm_100_ns.png`
 
-\- `paint\_boxplots\_SASA\_epitope\_NPT\_W\_I\_PMm\_100\_ns.png`
+\- `paint_boxplots_SASA_epitope_NPT_W_I_PMm_100_ns.png`
 
-\- `plots\_Rg\_ECL\_NPT\_W\_I\_PMm\_100\_ns.png`
+\- `plots_Rg_ECL_NPT_W_I_PMm_100_ns.png`
 
-\- `plot\_PCA\_MD\_ECL\_2\_bonds\_NPT\_W\_I\_PMm\_100\_ns\_stride\_5.png`
+\- `plot_PCA_MD_ECL_2_bonds_NPT_W_I_PMm_100_ns_stride_5.png`
 
-\- `plot\_PCA123\_MD\_ECL\_no\_bonds\_NPT\_W\_I\_PMm\_100\_ns\_stride\_5.png`
+\- `plot_PCA123_MD_ECL_no_bonds_NPT_W_I_PMm_100_ns_stride_5.png`
 
-\- `hist\_RMSD\_MD\_ECL\_no\_bonds\_NPT\_W\_I\_PMm\_100\_ns\_stride\_5.png`
+\- `hist_RMSD_MD_ECL_no_bonds_NPT_W_I_PMm_100_ns_stride_5.png`
 
 
 
 \### 5. Конфигурации и логи (.conf, .out)
 
-По одному `.conf` и одному `.out` на каждую систему (суффикс `\_3` у `.conf` — версия конфига).
+По одному `.conf` и одному `.out` на каждую систему (суффикс `_3` у `.conf` — версия конфига).
 
-\- `MD\_2\_bonds\_W\_I\_PMm\_100\_ns\_3.conf` / `MD\_2\_bonds\_W\_I\_PMm\_100\_ns.out`
+\- `MD_2_bonds_W_I_PMm_100_ns_3.conf` / `MD_2_bonds_W_I_PMm_100_ns.out`
 
-\- `MD\_303\_350\_W\_I\_PMm\_100\_ns\_3.conf` / `MD\_303\_350\_W\_I\_PMm\_100\_ns.out`
+\- `MD_303_350_W_I_PMm_100_ns_3.conf` / `MD_303_350_W_I_PMm_100_ns.out`
 
-\- `MD\_no\_bonds\_W\_I\_PMm\_100\_ns\_3.conf` / `MD\_no\_bonds\_W\_I\_PMm\_100\_ns.out`
+\- `MD_no_bonds_W_I_PMm_100_ns_3.conf` / `MD_no_bonds_W_I_PMm_100_ns.out`
 
 
 
 \### 6. Итоговые документы
 
-\- `NPT\_W\_I\_PMm\_100\_ns.docx` — отчёт по серии.
+\- `NPT_W_I_PMm_100_ns.docx` — отчёт по серии.
 
-\- `Systems\_comparison.xlsx` — сравнительная таблица по системам.
+\- `Systems_comparison.xlsx` — сравнительная таблица по системам.
 
 
 
@@ -247,11 +247,11 @@
 
 
 
-\- Файлы с `stride\_5` используют каждый 5-й кадр траектории.
+\- Файлы с `stride_5` используют каждый 5-й кадр траектории.
 
-\- Префикс `paint\_` обозначает график, отредактированный в Paint; номер (`paint2\_`, `paint3\_`) — номер редакции.
+\- Префикс `paint_` обозначает график, отредактированный в Paint; номер (`paint2_`, `paint3_`) — номер редакции.
 
-\- `MD\_no\_bonds\_W\_I\_PMm\_100\_ns.png` — скриншот из VMD с примером исследуемой системы.
+\- `MD_no_bonds_W_I_PMm_100_ns.png` — скриншот из VMD с примером исследуемой системы.
 
 \- Имена файлов без префикса — это исходные (сырые) данные.
 
