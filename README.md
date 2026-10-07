@@ -4,7 +4,7 @@
 
 
 
-Репозиторий содержит сырые и обработанные данные по 2 проведённым сериям экспериментов: папки Series\_1, Series\_2.
+Репозиторий содержит сырые и обработанные данные по 2 проведённым сериям экспериментов: папки Series\_1, Series\_2 и rin_centrality_analysis.
 
-Подробные описания входящих в них файлов см. в Series\_1/README\_Series\_1.md и Series\_2/README\_Series\_2.md соответственно.
+Подробные описания входящих в них файлов см. в Series\_1/README\_Series\_1.md, Series\_2/README\_Series\_2.md и rin_centrality_analysis/README_rin.md соответственно.
 
