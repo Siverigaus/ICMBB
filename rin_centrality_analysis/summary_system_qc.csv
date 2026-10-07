@@ -1,0 +1,57 @@
+system_id,batch,replicate,length_ns,variant,variant_class,dcd_filename,psf_filename,dcd_remote,psf_remote,notes,n_nodes,n_edges,density,n_components,giant_component_size,giant_component_fraction,backbone_edges,edge_types_present,edge_type_counts_json,n_frames_total,n_frames_used,frame_stride,min_contact_frequency,n_degree_hubs,n_betweenness_hubs,n_consensus_hubs,mean_degree,mean_strength,runtime_min,status,error,traceback
+303-322_2,2,1,30,303-322,pair,303-322_2.dcd,step5_assembly_303_322.psf,/MANIA_WANIA_project/MD_trajectories/NaPi2b/Alina/dcd/303-322_2.dcd,/MANIA_WANIA_project/MD_trajectories/NaPi2b/Alina/psf/step5_assembly_303_322.psf,NAMD PSF/DCD; independent 30-ns trajectory; protein-only RIN analysis,684.0,3358.0,0.0143758615670459,1.0,684.0,1.0,677.0,aromaticpi;backbone;cationpi;hbond;hydrophobic;ionic;saltbridge;vdw,"{""aromaticpi"": 20, ""backbone"": 677, ""cationpi"": 5, ""hbond"": 571, ""hydrophobic"": 136, ""ionic"": 22, ""saltbridge"": 7, ""vdw"": 2680}",401.0,41.0,10.0,0.3,89.0,69.0,21.0,9.818713450292398,43.404721152474686,2.507,done,,
+303-328_2,2,2,30,303-328,pair,303-328_2.dcd,step5_assembly303-328.psf,/MANIA_WANIA_project/MD_trajectories/NaPi2b/Alina/dcd/303-328_2.dcd,/MANIA_WANIA_project/MD_trajectories/NaPi2b/Alina/psf/step5_assembly303-328.psf,NAMD PSF/DCD; independent 30-ns trajectory; protein-only RIN analysis,,,,,,,,,,,,,,,,,,,,failed,"ValueError(""The topology and DCD trajectory files don't have the same number of atoms!\nTopology number of atoms 280825\nTrajectory: /content/namd_rin_centrality_batch2/trajectory_cache/303-328_2/303-328_2.dcd Number of atoms 280704"")","Traceback (most recent call last):
+  File ""/tmp/ipykernel_2356/1661696547.py"", line 48, in <cell line: 0>
+    outcome = process_system(system_row)
+  File ""/tmp/ipykernel_2356/1661696547.py"", line 6, in process_system
+    universe = mda.Universe(str(psf_path), str(dcd_path))
+  File ""/usr/local/lib/python3.13/dist-packages/MDAnalysis/core/universe.py"", line 593, in __init__
+    self.load_new(
+    ~~~~~~~~~~~~~^
+        coordinates,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File ""/usr/local/lib/python3.13/dist-packages/MDAnalysis/core/universe.py"", line 854, in load_new
+    raise ValueError(
+    ...<9 lines>...
+    )
+ValueError: The topology and DCD trajectory files don't have the same number of atoms!
+Topology number of atoms 280825
+Trajectory: /content/namd_rin_centrality_batch2/trajectory_cache/303-328_2/303-328_2.dcd Number of atoms 280704
+"
+303-350_2,2,3,30,303-350,pair,303-350_2.dcd,step5_assembly303-350.psf,/MANIA_WANIA_project/MD_trajectories/NaPi2b/Alina/dcd/303-350_2.dcd,/MANIA_WANIA_project/MD_trajectories/NaPi2b/Alina/psf/step5_assembly303-350.psf,NAMD PSF/DCD; independent 30-ns trajectory; protein-only RIN analysis,690.0,3437.0,0.0144590984623798,1.0,690.0,1.0,689.0,aromaticpi;backbone;cationpi;hbond;hydrophobic;ionic;saltbridge;vdw,"{""aromaticpi"": 22, ""backbone"": 689, ""cationpi"": 8, ""hbond"": 555, ""hydrophobic"": 138, ""ionic"": 26, ""saltbridge"": 9, ""vdw"": 2745}",400.0,40.0,10.0,0.3,90.0,69.0,26.0,9.96231884057971,43.36978260869565,2.339,done,,
+303_2,2,4,30,303,single,303_2.dcd,step5_assembly303.psf,/MANIA_WANIA_project/MD_trajectories/NaPi2b/Alina/dcd/303_2.dcd,/MANIA_WANIA_project/MD_trajectories/NaPi2b/Alina/psf/step5_assembly303.psf,NAMD PSF/DCD; independent 30-ns trajectory; protein-only RIN analysis,684.0,3358.0,0.0143758615670459,1.0,684.0,1.0,677.0,aromaticpi;backbone;cationpi;hbond;hydrophobic;ionic;saltbridge;vdw,"{""aromaticpi"": 22, ""backbone"": 677, ""cationpi"": 5, ""hbond"": 550, ""hydrophobic"": 139, ""ionic"": 23, ""saltbridge"": 13, ""vdw"": 2680}",400.0,40.0,10.0,0.3,92.0,69.0,23.0,9.818713450292398,43.0452485380117,2.362,done,,
+322-328_2,2,5,30,322-328,pair,322-328_2.dcd,step5_assembly322-328.psf,/MANIA_WANIA_project/MD_trajectories/NaPi2b/Alina/dcd/322-328_2.dcd,/MANIA_WANIA_project/MD_trajectories/NaPi2b/Alina/psf/step5_assembly322-328.psf,NAMD PSF/DCD; independent 30-ns trajectory; protein-only RIN analysis,690.0,3337.0,0.0140384089522727,1.0,690.0,1.0,689.0,aromaticpi;backbone;cationpi;hbond;hydrophobic;ionic;saltbridge;vdw,"{""aromaticpi"": 22, ""backbone"": 689, ""cationpi"": 6, ""hbond"": 552, ""hydrophobic"": 136, ""ionic"": 26, ""saltbridge"": 8, ""vdw"": 2645}",400.0,40.0,10.0,0.3,73.0,69.0,18.0,9.672463768115945,43.32195652173913,2.373,done,,
+322-350_2,2,6,30,322-350,pair,322-350_2.dcd,step5_assembly322-350.psf,/MANIA_WANIA_project/MD_trajectories/NaPi2b/Alina/dcd/322-350_2.dcd,/MANIA_WANIA_project/MD_trajectories/NaPi2b/Alina/psf/step5_assembly322-350.psf,NAMD PSF/DCD; independent 30-ns trajectory; protein-only RIN analysis,690.0,3408.0,0.0143370985044487,1.0,690.0,1.0,689.0,aromaticpi;backbone;cationpi;hbond;hydrophobic;ionic;saltbridge;vdw,"{""aromaticpi"": 16, ""backbone"": 689, ""cationpi"": 5, ""hbond"": 558, ""hydrophobic"": 133, ""ionic"": 23, ""saltbridge"": 9, ""vdw"": 2717}",400.0,40.0,10.0,0.3,87.0,69.0,16.0,9.878260869565215,42.74514492753623,2.316,done,,
+322_2,2,7,30,322,single,322_2.dcd,step5_assembly322.psf,/MANIA_WANIA_project/MD_trajectories/NaPi2b/Alina/dcd/322_2.dcd,/MANIA_WANIA_project/MD_trajectories/NaPi2b/Alina/psf/step5_assembly322.psf,NAMD PSF/DCD; independent 30-ns trajectory; protein-only RIN analysis,684.0,3354.0,0.0143587372530887,1.0,684.0,1.0,677.0,aromaticpi;backbone;cationpi;hbond;hydrophobic;ionic;saltbridge;vdw,"{""aromaticpi"": 18, ""backbone"": 677, ""cationpi"": 6, ""hbond"": 574, ""hydrophobic"": 120, ""ionic"": 27, ""saltbridge"": 12, ""vdw"": 2675}",400.0,40.0,10.0,0.3,69.0,69.0,14.0,9.807017543859647,42.81366959064328,2.204,done,,
+328-350_2,2,8,30,328-350,pair,328-350_2.dcd,step5_assembly328-350.psf,/MANIA_WANIA_project/MD_trajectories/NaPi2b/Alina/dcd/328-350_2.dcd,/MANIA_WANIA_project/MD_trajectories/NaPi2b/Alina/psf/step5_assembly328-350.psf,NAMD PSF/DCD; independent 30-ns trajectory; protein-only RIN analysis,690.0,3477.0,0.0146273742664226,1.0,690.0,1.0,689.0,aromaticpi;backbone;cationpi;hbond;hydrophobic;ionic;saltbridge;vdw,"{""aromaticpi"": 21, ""backbone"": 689, ""cationpi"": 7, ""hbond"": 563, ""hydrophobic"": 133, ""ionic"": 32, ""saltbridge"": 11, ""vdw"": 2786}",400.0,40.0,10.0,0.3,87.0,69.0,24.0,10.078260869565218,43.39152173913044,2.226,done,,
+328_2,2,9,30,328,single,328_2.dcd,step5_assembly_328.psf,/MANIA_WANIA_project/MD_trajectories/NaPi2b/Alina/dcd/328_2.dcd,/MANIA_WANIA_project/MD_trajectories/NaPi2b/Alina/psf/step5_assembly_328.psf,NAMD PSF/DCD; independent 30-ns trajectory; protein-only RIN analysis,684.0,3419.0,0.0146370073548928,1.0,684.0,1.0,677.0,aromaticpi;backbone;cationpi;hbond;hydrophobic;ionic;saltbridge;vdw,"{""aromaticpi"": 20, ""backbone"": 677, ""cationpi"": 6, ""hbond"": 580, ""hydrophobic"": 124, ""ionic"": 31, ""saltbridge"": 8, ""vdw"": 2741}",400.0,40.0,10.0,0.3,85.0,69.0,18.0,9.997076023391813,42.66900584795322,2.158,done,,
+328tyr_2,2,10,30,328tyr,single,328tyr_2.dcd,step5_assembly328-tyr.psf,/MANIA_WANIA_project/MD_trajectories/NaPi2b/Alina/dcd/328tyr_2.dcd,/MANIA_WANIA_project/MD_trajectories/NaPi2b/Alina/psf/step5_assembly328-tyr.psf,NAMD PSF/DCD; independent 30-ns trajectory; protein-only RIN analysis,684.0,3384.0,0.0144871696077675,1.0,684.0,1.0,677.0,aromaticpi;backbone;cationpi;hbond;hydrophobic;ionic;saltbridge;vdw,"{""aromaticpi"": 19, ""backbone"": 677, ""cationpi"": 4, ""hbond"": 562, ""hydrophobic"": 134, ""ionic"": 26, ""saltbridge"": 8, ""vdw"": 2707}",400.0,40.0,10.0,0.3,86.0,69.0,26.0,9.894736842105264,43.453143274853794,2.364,done,,
+350_2,2,11,30,350,single,350_2.dcd,step5_assembly_350.psf,/MANIA_WANIA_project/MD_trajectories/NaPi2b/Alina/dcd/350_2.dcd,/MANIA_WANIA_project/MD_trajectories/NaPi2b/Alina/psf/step5_assembly_350.psf,NAMD PSF/DCD; independent 30-ns trajectory; protein-only RIN analysis,684.0,3363.0,0.0143972669594924,1.0,684.0,1.0,677.0,aromaticpi;backbone;cationpi;hbond;hydrophobic;ionic;saltbridge;vdw,"{""aromaticpi"": 17, ""backbone"": 677, ""cationpi"": 4, ""hbond"": 573, ""hydrophobic"": 123, ""ionic"": 24, ""saltbridge"": 10, ""vdw"": 2686}",400.0,40.0,10.0,0.3,71.0,69.0,19.0,9.833333333333334,43.0172514619883,2.23,done,,
+WT_2,2,12,30,WT,control,WT_2.dcd,step5_assembly_WT.psf,/MANIA_WANIA_project/MD_trajectories/NaPi2b/Alina/dcd/WT_2.dcd,/MANIA_WANIA_project/MD_trajectories/NaPi2b/Alina/psf/step5_assembly_WT.psf,NAMD PSF/DCD; independent 30-ns trajectory; protein-only RIN analysis,,,,,,,,,,,,,,,,,,,,failed,"ValueError(""The topology and DCD trajectory files don't have the same number of atoms!\nTopology number of atoms 280780\nTrajectory: /content/namd_rin_centrality_batch2/trajectory_cache/WT_2/WT_2.dcd Number of atoms 280730"")","Traceback (most recent call last):
+  File ""/tmp/ipykernel_2356/1661696547.py"", line 48, in <cell line: 0>
+    outcome = process_system(system_row)
+  File ""/tmp/ipykernel_2356/1661696547.py"", line 6, in process_system
+    universe = mda.Universe(str(psf_path), str(dcd_path))
+  File ""/usr/local/lib/python3.13/dist-packages/MDAnalysis/core/universe.py"", line 593, in __init__
+    self.load_new(
+    ~~~~~~~~~~~~~^
+        coordinates,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File ""/usr/local/lib/python3.13/dist-packages/MDAnalysis/core/universe.py"", line 854, in load_new
+    raise ValueError(
+    ...<9 lines>...
+    )
+ValueError: The topology and DCD trajectory files don't have the same number of atoms!
+Topology number of atoms 280780
+Trajectory: /content/namd_rin_centrality_batch2/trajectory_cache/WT_2/WT_2.dcd Number of atoms 280730
+"
